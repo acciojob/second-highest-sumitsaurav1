@@ -8,9 +8,25 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
+		function secondHighest(a) {
 			//Write your code here
-			
+			let max=a[0];
+			let index=0;
+			let n = a.length;
+			for(let i=0;i<a.length;i++){
+				if(max<a[i])
+				{
+					max=a[i];
+					index=i;
+				}
+			}
+			let max2=Number.MIN_VALUE;
+			for(let i=0;i<a.length;i++){
+				if(max2<a[i] && max>max2)
+				{
+					max2=a[i];
+				}
+			} return max2;
 		}
 
 		function Main() {
